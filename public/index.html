@@ -1,21 +1,210 @@
-
-
 <!DOCTYPE html>
 <html>
+    <title> Mean Stack</title>
+    <head> 
+        <link rel="stylesheet" href="lips/css/components.css">
+        <link rel="stylesheet" href="lips/css/icons.css">
+        <link rel="stylesheet" href="lips/css/responsee.css">
+        <script src="lips/Js/angular.js"></script>
+        <script src="controllers/mainController.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+
+
+
+    </head>
+
+
 <body>
+ 
 
-<h1>JavaScript Variables</h1>
 
-<p>In this example, x, y, and z are variables</p>
+<div ng-app="workshop" ng-controller="workshopController"> 
+  
 
-<p id="demo"></p>
 
-<script>
-var x = 5;
-var y = 6;
-var z = x + y;
-document.getElementById("demo").innerHTML = z;
-</script>
+    <p><a href = "#!home">Add Student</a></p>
+         <p><a href = "#!about">View Students</a></p>
+
+         <div ng-view></div>
+         
+         
+
+
+    <!-- <div  ng-init = "countries = [
+    {locale:'en-US',name:'United States',school : 'sjk'},
+     {locale:'en-GB',name:'United Kingdom',school : 'cd'}, 
+     {locale:'en-FR',name:'France',school : 'sjo'}]"> 
+     
+         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
+         <p>Hello <span ng-bind = "name"></span>!</p>
+         <p>List of Countries with locale:</p>
+      
+         <ol>
+            <li ng-repeat = "country in countries">
+               {{ 'Country: ' + country.name + ', Locale: ' + country.locale }}
+            </li>
+         </ol>
+    </div> -->
+
+     <!-- next topic expression -->
+
+         <!-- Enter first name: <input type = "text" ng-model = "student.fname"><br><br>
+         Enter last name: <input type = "text" ng-model = "student.lname"><br>
+         <br>
+         
+         You are entering: {{student.fullName()}} -->
+
+         <!-- topic no 4th -->
+
+          <!-- <table border = "0">
+            <tr>
+               <td>Enter first name:</td>
+               <td><input type = "text" ng-model = "student.firstName"></td>
+            </tr>
+            
+            <tr>
+               <td>Enter last name: </td>
+               <td><input type = "text" ng-model = "student.lastName"></td>
+            </tr>
+            
+            <tr>
+               <td>Enter fees: </td>
+               <td><input type = "text" ng-model = "student.fees "></td>
+            </tr>
+            
+            <tr>
+               <td>Enter subject: </td>
+               <td><input type = "text" ng-model = "subjectName"></td>
+            </tr>
+         </table>
+         <br/>
+         
+         <table border = "0">
+            <tr>
+               <td>Name in Upper Case: </td><td>{{student.fullName() | uppercase}}</td>
+            </tr>
+         
+            <tr>
+               <td>Name in Lower Case: </td><td>{{student.fullName() | uppercase}}</td>
+            </tr>
+         
+            <tr>
+               <td>fees: </td><td>{{student.fees | currency}}
+               </td>
+            </tr>
+				
+            <tr>
+               <td>Subject:</td>
+
+               <td>
+                  <ul>
+                     <li ng-repeat = "subject in student.subjects | filter: subjectName |orderBy:'marks'">
+                        {{ subject.name + ', marks:' + subject.marks }}
+                     </li>
+                  </ul>
+               </td>
+            </tr>
+         </table> -->
+
+
+         <!-- Tables topic 5 -->
+
+         <!-- <table border = "0">
+            <tr>
+               <td>Enter first name:</td>
+               <td><input type = "text" ng-model = "student.firstName"></td>
+            </tr>
+            
+            <tr>
+               <td>Enter last name: </td>
+               <td>
+                  <input type = "text" ng-model = "student.lastName">
+               </td>
+            </tr>
+            
+            <tr>
+               <td>Name: </td>
+               <td>{{student.fullName()}}</td>
+            </tr>
+            
+            <tr>
+               <td>Subject:</td>
+					
+               <td>
+                  <table>
+                     <tr>
+                        <th>Name</th>.
+                        <th>Marks</th>
+                     </tr>
+                     
+                     <tr ng-repeat = "subject in student.subjects">
+                        <td>{{ subject.name }}</td>
+                        <td>{{ subject.marks }}</td>
+                     </tr>
+							
+                  </table>
+               </td>
+					
+            </tr>
+         </table>
+      
+       -->
+
+
+
+       <!-- <form name = "studentForm" >
+
+         <table border = "0">
+               <tr>
+                  <td>Enter first name:</td>
+                  <td><input name = "firstname" type = "text" ng-model = "firstName" required>
+                     <span style = "color:red" ng-show = "studentForm.firstname.$dirty && studentForm.firstname.$invalid">
+                        <span ng-show = "studentForm.firstname.$error.required">First Name is required.</span>
+                     </span>
+                  </td>
+               </tr>
+         </table>
+            <tr>
+                  <td>Enter last name: </td>
+                  <td><input name = "lastname"  type = "text" ng-model = "lastName" required>
+                     <span style = "color:red" ng-show = "studentForm.lastname.$dirty && studentForm.lastname.$invalid">
+                        <span ng-show = "studentForm.lastname.$error.required">Last Name is required.</span>
+                     </span>
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td>Email: </td><td><input name = "email" type = "email" ng-model = "email" length = "100" required>
+                     <span style = "color:red" ng-show = "studentForm.email.$dirty && studentForm.email.$invalid">
+                        <span ng-show = "studentForm.email.$error.required">Email is required.</span>
+                        <span ng-show = "studentForm.email.$error.email">Invalid email address.</span>
+                     </span>
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td>
+                     <button ng-click = "reset()">Reset</button>
+                  </td>
+                  <td>
+                     <button ng-disabled = "studentForm.firstname.$dirty &&
+                        studentForm.firstname.$invalid || studentForm.lastname.$dirty &&
+                        studentForm.lastname.$invalid || studentForm.email.$dirty &&
+                        studentForm.email.$invalid" ng-click="submit()">Submit</button>
+                  </td>
+               </tr>
+
+       </form> -->
+
+ <!-- <p>Enter a number: <input type = "number" ng-model = "number" /></p>
+         <button ng-click = "square()">X<sup>2</sup></button>
+         <p>Result: {{result}}</p> -->
+
+
+</div>
+    
+       
+</div>
 
 </body>
 </html>
