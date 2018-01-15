@@ -1,204 +1,131 @@
 <!DOCTYPE html>
 <html>
+
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prospera Free - New Amazing HTML5 Template</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/responsee.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/template-style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="js/validation.js"></script> 
+  </head>  
+  
     <title> Mean Stack</title>
-    <head> 
-        <link rel="stylesheet" href="lips/css/components.css">
+     
+        <!-- <link rel="stylesheet" href="lips/css/components.css">
         <link rel="stylesheet" href="lips/css/icons.css">
-        <link rel="stylesheet" href="lips/css/responsee.css">
+        <link rel="stylesheet" href="lips/css/responsee.css"> -->
         <script src="lips/Js/angular.js"></script>
         <script src="controllers/mainController.js"></script>
         <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
 
 
 
-    </head>
+    
 
 
-<body>
- 
+
+   <body class="size-1140">
 
 
 <div ng-app="workshop" ng-controller="workshopController"> 
   
 
 
-    <p><a href = "#!home">Add Student</a></p>
-         <p><a href = "#!about">View Students</a></p>
+    <!-- <p><a href = "#!home">HOME</a></p>
+         <p><a >ABOUT</a></p> -->
 
-         <div ng-view></div>
-         
          
 
-
-    <!-- <div  ng-init = "countries = [
-    {locale:'en-US',name:'United States',school : 'sjk'},
-     {locale:'en-GB',name:'United Kingdom',school : 'cd'}, 
-     {locale:'en-FR',name:'France',school : 'sjo'}]"> 
-     
-         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
-         <p>Hello <span ng-bind = "name"></span>!</p>
-         <p>List of Countries with locale:</p>
+       
+  	<!-- PREMIUM FEATURES BUTTON -->
+  	<!-- <a target="_blank" class="hide-s" href="../template/prospera-premium-responsive-business-template/" style="position:fixed;top:120px;right:-14px;z-index:10;"><img src="img/premium-features.png" alt=""></a> -->
+    <!-- HEADER -->
+    <header role="banner">    
+      <!-- Top Bar -->
+      <div class="top-bar background-white">
+        <div class="line">
+          <div class="s-12 m-6 l-6">
+            <div class="top-bar-contact">
+              <p class="text-size-12">Contact Us: 0800 200 200 | <a class="text-orange-hover" href="mailto:contact@sampledomain.com">contact@sampledomain.com</a></p>
+            </div>
+          </div>
+          <div class="s-12 m-6 l-6">
+            <div class="right">
+              <ul class="top-bar-social right">
+                <li><a href="/"><i class="icon-facebook_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-twitter_circle text-orange-hover"></i></a> </li>
+                <li><a href="/"><i class="icon-google_plus_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-instagram_circle text-orange-hover"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       
-         <ol>
-            <li ng-repeat = "country in countries">
-               {{ 'Country: ' + country.name + ', Locale: ' + country.locale }}
-            </li>
-         </ol>
-    </div> -->
+      <!-- Top Navigation -->
+      <nav class="background-white background-primary-hightlight">
+        <div class="line">
+          <div class="s-12 l-2">
+            <a href="index.html" class="logo"><img src="img/logo-free.png" alt=""></a>
+          </div>
+          <div class="top-nav s-12 l-10">
+            <p class="nav-text"></p>
+            <ul class="right chevron">
+              <li><a href = "#!home">Home</a></li>
+              <!-- <li><a href="products.html">Products</a></li> -->
+              <!-- <li><a>Services</a>
+                <ul>
+                  <li><a>Service 1</a>
+                    <ul>
+                      <li><a>Service 1 A</a></li>
+                      <li><a>Service 1 B</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Service 2</a></li>
+                </ul>
+              </li> -->
+              <li><a href = "#!about">About</a></li>
+              <!-- <li><a href="gallery.html">Gallery</a></li> -->
+              <li><a href="#!contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-     <!-- next topic expression -->
-
-         <!-- Enter first name: <input type = "text" ng-model = "student.fname"><br><br>
-         Enter last name: <input type = "text" ng-model = "student.lname"><br>
-         <br>
-         
-         You are entering: {{student.fullName()}} -->
-
-         <!-- topic no 4th -->
-
-          <!-- <table border = "0">
-            <tr>
-               <td>Enter first name:</td>
-               <td><input type = "text" ng-model = "student.firstName"></td>
-            </tr>
-            
-            <tr>
-               <td>Enter last name: </td>
-               <td><input type = "text" ng-model = "student.lastName"></td>
-            </tr>
-            
-            <tr>
-               <td>Enter fees: </td>
-               <td><input type = "text" ng-model = "student.fees "></td>
-            </tr>
-            
-            <tr>
-               <td>Enter subject: </td>
-               <td><input type = "text" ng-model = "subjectName"></td>
-            </tr>
-         </table>
-         <br/>
-         
-         <table border = "0">
-            <tr>
-               <td>Name in Upper Case: </td><td>{{student.fullName() | uppercase}}</td>
-            </tr>
-         
-            <tr>
-               <td>Name in Lower Case: </td><td>{{student.fullName() | uppercase}}</td>
-            </tr>
-         
-            <tr>
-               <td>fees: </td><td>{{student.fees | currency}}
-               </td>
-            </tr>
-				
-            <tr>
-               <td>Subject:</td>
-
-               <td>
-                  <ul>
-                     <li ng-repeat = "subject in student.subjects | filter: subjectName |orderBy:'marks'">
-                        {{ subject.name + ', marks:' + subject.marks }}
-                     </li>
-                  </ul>
-               </td>
-            </tr>
-         </table> -->
-
-
-         <!-- Tables topic 5 -->
-
-         <!-- <table border = "0">
-            <tr>
-               <td>Enter first name:</td>
-               <td><input type = "text" ng-model = "student.firstName"></td>
-            </tr>
-            
-            <tr>
-               <td>Enter last name: </td>
-               <td>
-                  <input type = "text" ng-model = "student.lastName">
-               </td>
-            </tr>
-            
-            <tr>
-               <td>Name: </td>
-               <td>{{student.fullName()}}</td>
-            </tr>
-            
-            <tr>
-               <td>Subject:</td>
-					
-               <td>
-                  <table>
-                     <tr>
-                        <th>Name</th>.
-                        <th>Marks</th>
-                     </tr>
-                     
-                     <tr ng-repeat = "subject in student.subjects">
-                        <td>{{ subject.name }}</td>
-                        <td>{{ subject.marks }}</td>
-                     </tr>
-							
-                  </table>
-               </td>
-					
-            </tr>
-         </table>
+    <!-- angular inject -->
+    <div ng-view></div>
+   
+      <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 38, 51, 0.80);">
       
-       -->
-
-
-
-       <!-- <form name = "studentForm" >
-
-         <table border = "0">
-               <tr>
-                  <td>Enter first name:</td>
-                  <td><input name = "firstname" type = "text" ng-model = "firstName" required>
-                     <span style = "color:red" ng-show = "studentForm.firstname.$dirty && studentForm.firstname.$invalid">
-                        <span ng-show = "studentForm.firstname.$error.required">First Name is required.</span>
-                     </span>
-                  </td>
-               </tr>
-         </table>
-            <tr>
-                  <td>Enter last name: </td>
-                  <td><input name = "lastname"  type = "text" ng-model = "lastName" required>
-                     <span style = "color:red" ng-show = "studentForm.lastname.$dirty && studentForm.lastname.$invalid">
-                        <span ng-show = "studentForm.lastname.$error.required">Last Name is required.</span>
-                     </span>
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>Email: </td><td><input name = "email" type = "email" ng-model = "email" length = "100" required>
-                     <span style = "color:red" ng-show = "studentForm.email.$dirty && studentForm.email.$invalid">
-                        <span ng-show = "studentForm.email.$error.required">Email is required.</span>
-                        <span ng-show = "studentForm.email.$error.email">Invalid email address.</span>
-                     </span>
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>
-                     <button ng-click = "reset()">Reset</button>
-                  </td>
-                  <td>
-                     <button ng-disabled = "studentForm.firstname.$dirty &&
-                        studentForm.firstname.$invalid || studentForm.lastname.$dirty &&
-                        studentForm.lastname.$invalid || studentForm.email.$dirty &&
-                        studentForm.email.$invalid" ng-click="submit()">Submit</button>
-                  </td>
-               </tr>
-
-       </form> -->
-
- <!-- <p>Enter a number: <input type = "number" ng-model = "number" /></p>
-         <button ng-click = "square()">X<sup>2</sup></button>
-         <p>Result: {{result}}</p> -->
+      <!-- Bottom Footer -->
+      <section class="padding background-dark">
+        <div class="line">
+          <div class="s-12 l-6">
+            <p class="text-size-12">Copyright 2017, Vision Design - graphic zoo</p>
+            <p class="text-size-12">All images have been purchased from Bigstock. Do not use the images in your website.</p>
+          </div>
+          <div class="s-12 l-6">
+            <a class="right text-size-12" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Design and coding<br> by Responsee Team</a>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>   
+    
+         
+       
 
 
 </div>
